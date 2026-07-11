@@ -1,0 +1,301 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-serif: 'Playfair Display', serif;
+    
+    /* Premium financial services color palette */
+    --color-text-primary: #1a365d; /* Deep navy blue */
+    --color-text-secondary: #2d3748; /* Dark slate */
+    --color-text-tertiary: #4a5568; /* Muted slate */
+    --color-text-muted: #718096; /* Muted blue-gray */
+    --color-brand-primary: #1a365d; /* Navy blue */
+    --color-brand-secondary: #2c5282; /* Deep sky blue */
+    --color-brand-accent: #d69e2e; /* Gold accent */
+    --color-background-light: #f1f5f9; /* Subtle warm gray */
+    --color-card-background: #f8fafc; /* Light card background */
+    --color-border: #e2e8f0; /* Light gray */
+  }
+  
+  body {
+    @apply text-text-secondary antialiased;
+    font-family: var(--font-sans);
+    font-feature-settings: 'liga' 1, 'kern' 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  /* Premium heading styles with serif fonts */
+  h1, .h1 {
+    font-family: var(--font-serif);
+    @apply font-bold text-text-primary leading-tight;
+    letter-spacing: -0.02em;
+  }
+  
+  h2, .h2 {
+    font-family: var(--font-serif);
+    @apply font-semibold text-text-primary leading-snug;
+    letter-spacing: -0.015em;
+  }
+  
+  h3, .h3 {
+    font-family: var(--font-sans);
+    @apply font-semibold text-text-primary leading-normal;
+    letter-spacing: -0.005em;
+  }
+  
+  h4, .h4 {
+    font-family: var(--font-sans);
+    @apply font-medium text-text-secondary leading-normal;
+  }
+  
+  h5, .h5 {
+    font-family: var(--font-sans);
+    @apply font-medium text-text-secondary leading-relaxed;
+  }
+  
+  h6, .h6 {
+    font-family: var(--font-sans);
+    @apply font-medium text-text-tertiary leading-relaxed;
+  }
+  
+  /* Enhanced body text styles */
+  p, .body-text {
+    font-family: var(--font-sans);
+    @apply font-normal text-text-secondary leading-relaxed;
+  }
+  
+  /* Optimize serif text rendering */
+  .font-serif {
+    font-feature-settings: 'liga' 1, 'kern' 1, 'salt' 1;
+  }
+  
+  /* Optimize sans-serif text rendering */
+  .font-sans {
+    font-feature-settings: 'liga' 1, 'kern' 1;
+  }
+  
+  /* Enhanced scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-100 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-400 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-500;
+  }
+}
+
+@layer components {
+  /* Enhanced container utility */
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Enhanced focus styles */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-white;
+  }
+  
+  /* Sophisticated gradient backgrounds */
+  .gradient-primary {
+    @apply bg-gradient-to-r from-sky-700 to-sky-800;
+  }
+  
+  .gradient-secondary {
+    @apply bg-gradient-to-r from-slate-50 to-slate-100;
+  }
+  
+  .gradient-accent {
+    @apply bg-gradient-to-r from-sky-50 to-blue-50;
+  }
+  
+  .gradient-hero {
+    @apply bg-gradient-to-br from-sky-50 via-white to-slate-50;
+  }
+  
+  /* Premium card styles */
+  .card-elevated {
+    @apply bg-card-background border border-border-default transition-all duration-300 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.12)] hover:translate-y-[-5px];
+  }
+  
+  .card-outlined {
+    @apply bg-card-background border border-border-default transition-all duration-300 shadow-sm hover:shadow-[0_15px_35px_rgba(0,0,0,0.1)] hover:translate-y-[-3px];
+  }
+  
+  .card-filled {
+    @apply bg-card-background border border-border-default transition-all duration-300 shadow-sm hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:translate-y-[-2px];
+  }
+  
+  /* Enhanced section padding */
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+  
+  .section-padding-top {
+    @apply pt-16 md:pt-24 lg:pt-32;
+  }
+  
+  .section-padding-bottom {
+    @apply pb-16 md:pb-24 lg:pb-32;
+  }
+  
+  /* Divider styles */
+  .divider {
+    @apply border-t border-slate-200;
+  }
+  
+  .divider-light {
+    @apply border-t border-slate-100;
+  }
+  
+  /* Badge styles */
+  .badge-primary {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-sky-100 text-sky-800;
+  }
+  
+  .badge-secondary {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-800;
+  }
+}
+
+@layer utilities {
+  /* Premium typography utilities */
+  .text-display-1 {
+    font-family: var(--font-serif);
+    @apply text-5xl md:text-6xl lg:text-7xl font-bold text-text-primary leading-tight;
+    letter-spacing: -0.02em;
+  }
+  
+  .text-display-2 {
+    font-family: var(--font-serif);
+    @apply text-4xl md:text-5xl lg:text-6xl font-semibold text-text-primary leading-tight;
+    letter-spacing: -0.015em;
+  }
+  
+  .text-display-3 {
+    font-family: var(--font-serif);
+    @apply text-3xl md:text-4xl font-semibold text-text-primary leading-snug;
+    letter-spacing: -0.01em;
+  }
+  
+  .text-heading-1 {
+    font-family: var(--font-sans);
+    @apply text-3xl md:text-4xl font-semibold text-text-primary leading-snug;
+    letter-spacing: -0.01em;
+  }
+  
+  .text-heading-2 {
+    font-family: var(--font-sans);
+    @apply text-2xl md:text-3xl font-medium text-text-primary leading-normal;
+    letter-spacing: -0.005em;
+  }
+  
+  .text-heading-3 {
+    font-family: var(--font-sans);
+    @apply text-xl md:text-2xl font-medium text-text-primary leading-normal;
+  }
+  
+  .text-heading-4 {
+    font-family: var(--font-sans);
+    @apply text-lg md:text-xl font-medium text-text-secondary leading-relaxed;
+  }
+  
+  .text-body-xl {
+    font-family: var(--font-sans);
+    @apply text-xl text-text-secondary leading-relaxed;
+  }
+  
+  .text-body-large {
+    font-family: var(--font-sans);
+    @apply text-lg text-text-secondary leading-relaxed;
+  }
+  
+  .text-body {
+    font-family: var(--font-sans);
+    @apply text-base text-text-secondary leading-relaxed;
+  }
+  
+  .text-body-small {
+    font-family: var(--font-sans);
+    @apply text-sm text-text-tertiary leading-relaxed;
+  }
+  
+  .text-caption {
+    font-family: var(--font-sans);
+    @apply text-xs text-text-muted leading-relaxed;
+  }
+  
+  .text-micro {
+    font-family: var(--font-sans);
+    @apply text-[0.625rem] text-text-muted leading-tight;
+  }
+  
+  /* Editorial text styles */
+  .text-editorial {
+    font-family: var(--font-serif);
+    @apply font-normal text-text-primary;
+    font-feature-settings: 'liga' 1, 'kern' 1, 'salt' 1;
+  }
+  
+  .text-corporate {
+    font-family: var(--font-sans);
+    @apply font-normal text-text-secondary;
+    font-feature-settings: 'liga' 1, 'kern' 1;
+  }
+  
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
