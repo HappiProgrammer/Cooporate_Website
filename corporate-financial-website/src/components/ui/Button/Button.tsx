@@ -8,7 +8,7 @@ export type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'lin
 export type ButtonSize = 'sm' | 'md' | 'lg';
 
 // Button props interface
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'onDrag' | 'onDragStart' | 'onDragEnd' | 'onDragOver' | 'onDragLeave' | 'onDragEnter' | 'onAnimationStart' | 'onTransitionEnd'> {
   variant?: ButtonVariant;
   size?: ButtonSize;
   isLoading?: boolean;
@@ -91,8 +91,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       whileTap: !disabled ? { scale: 0.98 } : undefined,
     };
 
-    // Filter out Radix UI specific props that cause conflicts
-    const { asChild, ...restProps } = props;
+    const restProps = props;
 
     return (
       <motion.button

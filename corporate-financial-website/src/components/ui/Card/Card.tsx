@@ -10,7 +10,7 @@ export type CardVariant = 'elevated' | 'outlined' | 'filled';
 export type CardPadding = 'none' | 'sm' | 'md' | 'lg';
 
 // Card props interface
-export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface CardProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onDrag' | 'onDragStart' | 'onDragEnd' | 'onDragOver' | 'onDragLeave' | 'onDragEnter' | 'onAnimationStart' | 'onTransitionEnd'> {
   variant?: CardVariant;
   padding?: CardPadding;
   hoverable?: boolean;

@@ -1,4 +1,4 @@
-import React, { forwardRef, useState } from 'react';
+import React, { forwardRef } from 'react';
 
 // Typography variants for premium corporate styling
 export type HeadingLevel = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
@@ -121,22 +121,11 @@ export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
     },
     ref
   ) => {
-    const [localClicked, setLocalClicked] = useState(false);
-    
-    const handleClick = () => {
-      if (clickable) {
-        setLocalClicked(!localClicked);
-      }
-      if (onClick) {
-        onClick();
-      }
-    };
-
     const classes = [
       headingLevels[level],
       colorClasses[color],
       hoverEffect && !clickable && hoverClasses,
-      clickable && (localClicked ? clickableHeaderClasses : ''),
+      clickable && isClicked && clickableHeaderClasses,
       isClicked && clickableHeaderClasses,
       editorialStyle && editorialClasses,
       corporateStyle && corporateClasses,
@@ -146,7 +135,7 @@ export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
       .join(' ');
 
     return (
-      <Component ref={ref} className={classes} onClick={handleClick} {...props}>
+      <Component ref={ref} className={classes} onClick={onClick} {...props}>
         {children}
       </Component>
     );

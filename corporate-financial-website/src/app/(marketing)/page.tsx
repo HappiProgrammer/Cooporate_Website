@@ -91,7 +91,7 @@ export default function HomePage() {
               Our Business Divisions
             </Heading2>
             <BodyLarge className="text-slate-600 max-w-3xl mx-auto">
-              We operate across four complementary divisions, each delivering specialized expertise to serve our clients' diverse needs.
+              We operate across four complementary divisions, each delivering specialized expertise to serve our clients&apos; diverse needs.
             </BodyLarge>
           </ScrollAnimated>
           

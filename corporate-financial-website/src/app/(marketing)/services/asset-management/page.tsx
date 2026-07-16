@@ -281,7 +281,7 @@ export default function AssetManagementPage() {
               Institutional Success Stories
             </Heading>
             <Text variant="body-large" className="text-slate-600 max-w-2xl mx-auto">
-              Examples of how we've helped institutional investors achieve their long-term objectives.
+              Examples of how we&apos;ve helped institutional investors achieve their long-term objectives.
             </Text>
           </div>
           

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { Variants } from 'framer-motion';
 
 interface ScrollAnimationOptions {
   threshold?: number;
@@ -63,7 +64,7 @@ export const scrollVariants = {
     scale: 1,
     transition: {
       duration: 0.6,
-      ease: [0.25, 0.1, 0.25, 1], // Custom easing curve
+      ease: [0.25, 0.1, 0.25, 1] as const, // Custom easing curve
       staggerChildren: 0.1
     }
   },
@@ -76,7 +77,7 @@ export const scrollVariants = {
     x: 0,
     transition: {
       duration: 0.6,
-      ease: [0.25, 0.1, 0.25, 1]
+      ease: [0.25, 0.1, 0.25, 1] as const
     }
   },
   hiddenRight: {
@@ -88,7 +89,7 @@ export const scrollVariants = {
     x: 0,
     transition: {
       duration: 0.6,
-      ease: [0.25, 0.1, 0.25, 1]
+      ease: [0.25, 0.1, 0.25, 1] as const
     }
   }
 };

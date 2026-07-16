@@ -210,7 +210,7 @@ export default function WealthManagementPage() {
               Success Stories
             </Heading>
             <Text variant="body-large" className="text-slate-600 max-w-2xl mx-auto">
-              Real examples of how we've helped clients achieve their wealth management objectives.
+              Real examples of how we&apos;ve helped clients achieve their wealth management objectives.
             </Text>
           </div>
           
@@ -247,7 +247,7 @@ export default function WealthManagementPage() {
               Ready to Preserve Your Legacy?
             </Display1>
             <Text as="p" variant="body-large" className="mb-10 text-sky-100 max-w-2xl mx-auto">
-              Connect with our wealth management specialists to discuss how we can help safeguard and grow your family's wealth for generations to come.
+              Connect with our wealth management specialists to discuss how we can help safeguard and grow your family&apos;s wealth for generations to come.
             </Text>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary">

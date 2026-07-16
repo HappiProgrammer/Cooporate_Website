@@ -92,7 +92,7 @@ export default function ServicesPage() {
                 Specialized Expertise Across<br/>Four Core Divisions
               </Display1>
               <Text as="p" variant="body-large" className="mb-10 max-w-2xl mx-auto text-slate-700">
-                Each division brings deep specialist knowledge to serve our clients' diverse financial needs with independent advice.
+                Each division brings deep specialist knowledge to serve our clients&apos; diverse financial needs with independent advice.
               </Text>
               <Button size="lg" variant="primary">
                 Explore Our Divisions
